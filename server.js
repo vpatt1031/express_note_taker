@@ -6,7 +6,7 @@ const uniqid = require('uniqid');
 const data = require("./db/db.json");
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
