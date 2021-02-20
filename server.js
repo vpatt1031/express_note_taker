@@ -17,7 +17,7 @@ app.use(express.static("public"));
 app.get("/notes", (req, res) => {
   res.sendFile(path.join(__dirname, "./public/notes.html"));
 });
-//what was added Saturday
+//Read File 
 app.get("/api/notes", (req, res) => {
   fs.readFile("./db/db.json", "utf-8", (err, response) => {
     if (err) throw err;
@@ -26,62 +26,42 @@ app.get("/api/notes", (req, res) => {
   });
 });
 
-// app.get("/api/notes", function(req, res) {
-//     return res.json(data);
-//   });
 
 // // Create New Note Items - takes in JSON input
-
-
 
 app.post("/api/notes", (req, res) => {
   res.send("/api/notes");
 
   // // req.body hosts is equal to the JSON post sent from the user
-  // // This works because of our body parsing middleware
+
   const newNote = req.body;
 
-  // // // Using a RegEx Pattern to remove spaces from newListItem
-  // // // You can read more about RegEx Patterns later https://www.regexbuddy.com/regex.html
-  // newNote.routeName = newNote.name.replace(/\s+/g, '').toLowerCase();
   newNote["id"] = uniqid()
   console.log(newNote);
   data.push(newNote);
 
-// // Need fs.writeFile
+// // Need fs.writeFile to update db.json with added note
   fs.writeFile('./db/db.json', JSON.stringify(data), err=> {
     if (err) throw err;
   })
-// then((data) => {
-//     const filename = `${data.name.toLowerCase().split(' ').join('')}.json`;
-
-//     fs.writeFile(filename, JSON.stringify(data, null, '\t'), (err) =>
-//       err ? console.log(err) : console.log('Success!')
-//     );
-//   });
-
-// fs.writeFile('./db/db.json', JSON.stringify(data, null, '\t'), (err) => {
-//     err ? console.log(err) : console.log('Success')
-// });
-
-//   res.json(newNote);
 });
+
 app.delete('/api/notes/:id', (req, res) => {
   console.log(req.body)
   res.json(req.params.id)
   
+// For loop to go through the array and select by id number assigned to new note
   for(i=0; i<data.length; i++){
     if(data[i].id == req.params.id){
       data.splice(i, 1)
     }
   }
-
+// Need fs.writeFile to update db.json with the deleted note
   fs.writeFile('./db/db.json', JSON.stringify(data), err => {
     if(err) throw err;
   })
 })
 
-// 
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "./public/index.html"));
 });
