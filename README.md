@@ -12,11 +12,11 @@ When the application is opened the user is presented with a landing page. When t
 
 # Screenshot:
 
-![alt text](images/getstarted.png "Get Started Page")
+![alt text](public/assets/images/getstarted.png "Get Started Page")
 
-![alt text](images/takenote.png "Take Note Page")
+![alt text](public/assets/images/takenote.png "Take Note Page")
 
-![alt text](images/savenote.png "Save Note Page")
+![alt text](public/assets/images/takenote.png "Save Note Page")
 
 # Link to deployed application:
 
