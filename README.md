@@ -14,9 +14,9 @@ When the application is opened the user is presented with a landing page. When t
 
 ![alt text](public/assets/images/getstarted.png "Get Started Page")
 
-![alt text](public/assets/images/takenote.png "Take Note Page")
+![alt text](public/assets/images/takenoteote.png "Take Note Page")
 
-![alt text](public/assets/images/takenote.png "Save Note Page")
+![alt text](public/assets/images/savenote.png "Save Note Page")
 
 # Link to deployed application:
 
