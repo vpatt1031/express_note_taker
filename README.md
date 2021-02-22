@@ -12,7 +12,7 @@ When the application is opened the user is presented with a landing page. When t
 
 # Screenshot:
 
-![alt text](express_note_taker/images/getstarted.png "Get Started Page")
+![ScreenShot](express_note_taker/images/getstarted.png "Get Started Page")
 
 ![alt text](express_note_taker/images/takenote.png "Take Note Page")
 
