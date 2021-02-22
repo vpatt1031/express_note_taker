@@ -12,11 +12,11 @@ When the application is opened the user is presented with a landing page. When t
 
 # Screenshot:
 
-![alttag](express_note_taker/public/assets/getstarted.png "Get started page")
+![alt tag](express_note_taker/public/assets/getstarted.png "Get started page")
 
-![alttag](express_note_taker/public/assets/takenote.png "Take note page")
+![alt tag](express_note_taker/public/assets/takenote.png "Take note page")
 
-![alttag](express_note_taker/public/assets/savenote.png "Save note page")
+![alt tag](express_note_taker/public/assets/savenote.png "Save note page")
 
 # Link to deployed application:
 
